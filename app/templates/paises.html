@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/css/bootstrap.min.css" integrity="sha512-jnSuA4Ss2PkkikSOLtYs8BlYIeeIK1h99ty4YfvRPAlzr377vr3CXDb7sb7eEEBYjDtcYj+AjBH3FLv5uSJuXg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Listado de Paises 🤪</h1>
+    <h3>Hola, {{usuario}}</h3>
+    <table class="table table-bordered">
+        <thead class="table-info">
+            <tr>
+                <th>Nombre de pais 🌎</th>
+                <th>Moneda 💵</th>
+                <th>Capital 🫢</th>
+                <th>Poblacion 👩🏼‍🦱</th>
+                <th>Superficie 🛵</th>
+                <th>Ciudades Principales 🧉</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for pais in paises %}
+        <tr>
+            <td class="text-danger">
+                {{pais.nombre}}
+            </td>
+            <td> {{pais.Moneda}} </td>
+            <td> {{pais.Capital}} </td>
+            <td> {{pais.Poblacion}} </td>
+            <td class="table table-success"> {{pais.Superficie}} </td>
+            <td> {{pais.CiudadesPrincipales}} </td>
+        </tr>
+        
+        {% endfor %}
+        </tbody>
+    </table>
+        
+</body>
+</html>
